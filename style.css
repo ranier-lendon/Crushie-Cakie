@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  background-image: url("assets/heart_gif.gif");
+  background-size: 30px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  padding-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.heart-img {
+    clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+    width: 24px;
+    height: 23px;
+    object-fit: cover;
+    background-color: red;
+    transform: scale(9);
+    animation: tibok 0.5s ease-out 0.3s infinite alternate-reverse;
+}
+
+.heart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+}
+
+.glow {
+  filter: drop-shadow(0 0 20px orangered);
+}
+
+.hearts {
+    width: 5%;
+    min-width: 100px;
+    height: 25%;
+    min-height: 300px;
+    filter: drop-shadow(0 0 10px black);
+    position: absolute;
+    z-index: 10;
+}
+
+.heart, .heart2 {
+    background-color: red;
+    position: absolute;
+    object-fit: cover;
+    height: 20%;
+    min-height: 64px;
+    width: 20%;
+    min-width: 64px;
+    opacity: 0;
+    -webkit-mask-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>');
+            mask-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>');
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: bottom;
+            mask-position: bottom;
+}
+
+.heart {
+    animation: floating-heart 6s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+}
+
+.heart2 {
+    animation: floating-heart2 8s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+}
+
+.heart2:nth-child(1) {  
+    animation-delay: 0s;
+}
+
+.heart2:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.heart2:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.heart2:nth-child(4) {
+    animation-delay: 4.5s;
+}
+
+.heart:nth-child(1) {  
+    animation-delay: 1s;
+}
+
+.heart:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+.heart:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+    animation-delay: 4.5s;
+}
+
+@keyframes tibok {
+    from {
+        transform: scale(11);
+    }
+    to {
+        transform: scale(9);
+    }
+}
+
+
+
+@keyframes floating-heart {
+    0% {
+        opacity: 0;
+        bottom: 0%;
+        left: -200%;
+      }
+      10% {
+        opacity: 1;
+        bottom: 20%;
+        left: -100%;
+      }
+      20% {
+        bottom: 40%;
+        left: -160%;
+      }
+      30% {
+        bottom: 60%;
+        left: -120%;
+      }
+      40% {
+        opacity: 1;
+        bottom: 80%;
+        left: -165%;
+      }
+      48% {
+        opacity: 0;
+        bottom: 100%;
+        left: -110%;
+      }
+      100% {
+        opacity: 0;
+        bottom: 100%;
+        left: -80%;
+      }
+}
+
+@keyframes floating-heart2 {
+    0% {
+      opacity: 0;
+      bottom: 0%;
+      left: 200%;
+    }
+    10% {
+      opacity: 1;
+      bottom: 20%;
+      left: 100%;
+    }
+    20% {
+      bottom: 40%;
+      left: 160%;
+    }
+    30% {
+      bottom: 60%;
+      left: 120%;
+    }
+    40% {
+      opacity: 1;
+      bottom: 80%;
+      left: 165%;
+    }
+    48% {
+      opacity: 0;
+      bottom: 100%;
+      left: 110%;
+    }
+    100% {
+      opacity: 0;
+      bottom: 100%;
+      left: 80%;
+    }
+}
